@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/sidebar"
 
 export default function Page() {
-  // throw new Error('Invalid Filter.');
   return (
     <SidebarProvider>
       <AppSidebar />
