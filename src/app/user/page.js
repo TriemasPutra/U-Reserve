@@ -14,6 +14,11 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
+const tab = [
+  { tab: 'Kampus 1', href: '#Kampus1' },
+  { tab: 'Kampus 2', href: '#Kampus2' },
+]
+
 export default function Page() {
   return (
     <SidebarProvider>
@@ -39,13 +44,16 @@ export default function Page() {
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-          </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+        <div className="flex flex-1 flex-row gap-4 p-4 pt-0">
+          {tab.map((item) => (
+            <a
+              key={item.tab}
+              href={item.href}
+              className="inline-block w-1/2 text-center text-sm/6 font-semibold text-gray-900 h-max"
+            >
+              {item.tab}
+            </a>
+          ))}
         </div>
       </SidebarInset>
     </SidebarProvider>
