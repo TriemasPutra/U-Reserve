@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "header": "Peminjaman Ruangan E305",
+    "type": "Cover page",
+    "status": "booked",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 2,
+    "header": "Peminjaman Ruangan E306",
+    "type": "Table of contents",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 3,
+    "header": "Peminjaman Ruangan E307",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 4,
+    "header": "Peminjaman Ruangan Juction",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 5,
+    "header": "Peminjaman Ruangan Auditorium",
+    "type": "Narrative",
+    "status": "booked",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 6,
+    "header": "Peminjaman Ruangan A4EPW1",
+    "type": "Narrative",
+    "status": "booked",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 7,
+    "header": "Peminjaman Ruangan Junction",
+    "type": "Narrative",
+    "status": "booked",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 8,
+    "header": "Peminjaman Ruangan AP4IPW3",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 9,
+    "header": "Peminjaman Ruangan A5EPW2",
+    "type": "Technical content",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 10,
+    "header": "Peminjaman Ruangan A6EPW3",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 11,
+    "header": "Peminjaman Ruangan A7EPW4",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 12,
+    "header": "Peminjaman Ruangan A4EPW2",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 13,
+    "header": "Peminjaman Ruangan E308",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 14,
+    "header": "Peminjaman Ruangan A7EPW4",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 15,
+    "header": "Peminjaman Ruangan A4EPW3",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 16,
+    "header": "Peminjaman Ruangan A4EPW3",
+    "type": "Narrative",
+    "status": "booked",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 17,
+    "header": "Peminjaman Ruangan A4EPW3",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 18,
+    "header": "Peminjaman Ruangan A6EPW3",
+    "type": "Plain language",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 19,
+    "header": "Peminjaman Ruangan Junction",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  },
+  {
+    "id": 20,
+    "header": "Peminjaman Ruangan Future Development Roadmap",
+    "type": "Narrative",
+    "status": "available",
+    "reviewer": "admin",
+    "from": "nama mahasiswa"
+  }
+]
