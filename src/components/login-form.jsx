@@ -1,19 +1,43 @@
+'use client'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
-export async function LoginForm({
+export function LoginForm({
   className,
   ...props
 }) {
+  const router = useRouter()
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+ 
+    const formData = new FormData(event.currentTarget)
+    const email = formData.get('email')
+    const password = formData.get('password')
+    const response = await fetch('@/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    })
+    console.log(response)
+    if (response.ok) {
+      console.log('Login successful')
+      // router.push('/public')
+    } else {
+      console.log('Login failed')
+    }
+  }
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
-          <form className="p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
@@ -23,7 +47,7 @@ export async function LoginForm({
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="email">NIM</Label>
-                <Input id="email" type="string" placeholder="XXXXXXXXX" required />
+                <Input name="email" id="email" type="string" placeholder="XXXXXXXXX" required />
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
@@ -32,7 +56,7 @@ export async function LoginForm({
                     Forgot your password?
                   </Link>
                 </div>
-                <Input id="password" type="password" required />
+                <Input name="password" id="password" type="password" required />
               </div>
               <Button type="submit" className="w-full">
                 Login
