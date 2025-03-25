@@ -42,6 +42,11 @@ const data = {
       icon: Bot,
     },
     {
+      title: "Navigation",
+      url: "#",
+      icon: Bot,
+    },
+    {
       title: "Calendar",
       url: "#",
       icon: BookOpen,
