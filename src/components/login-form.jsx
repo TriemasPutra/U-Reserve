@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
+import data from '../data/dummy.json'
 
 export function LoginForm({
   className,
@@ -15,21 +16,21 @@ export function LoginForm({
 
   async function handleSubmit(event) {
     event.preventDefault()
- 
+
     const formData = new FormData(event.currentTarget)
     const email = formData.get('email')
     const password = formData.get('password')
-    const response = await fetch('@/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    })
-    console.log(response)
-    if (response.ok) {
-      console.log('Login successful')
-      // router.push('/public')
-    } else {
-      console.log('Login failed')
+    if (email in data) {
+      if (data[email].password === password) {
+        // User found, return success
+        router.push('/public')
+      } else {
+        // Password does not match
+        console.log('Wrong Password.')
+      }
+    }
+    else {
+      console.log('ID not found.')
     }
   }
 
