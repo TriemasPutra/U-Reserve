@@ -258,8 +258,8 @@ const columns = [
             </SelectTrigger>
             <SelectContent align="end">
               <SelectItem value="Eddie Lake">Eddie Lake</SelectItem>
-              <SelectItem value="Jamik Tashpulatov">
-                Jamik Tashpulatov
+              <SelectItem value="U-Reserve">
+                U-Reserve
               </SelectItem>
             </SelectContent>
           </Select>
@@ -284,6 +284,7 @@ const columns = [
           <DropdownMenuItem>Edit</DropdownMenuItem>
           <DropdownMenuItem>Make a copy</DropdownMenuItem>
           <DropdownMenuItem>Favorite</DropdownMenuItem>
+          <DropdownMenuItem>Approve</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
         </DropdownMenuContent>
