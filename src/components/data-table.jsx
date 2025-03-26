@@ -179,7 +179,7 @@ const columns = [
     header: "Status",
     cell: ({ row }) => (
       <Badge variant="outline" className="text-muted-foreground px-1.5">
-        {row.original.status === "Done" ? (
+        {row.original.status === "Booking" ? (
           <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
         ) : (
           <IconLoader />
@@ -197,7 +197,7 @@ const columns = [
           e.preventDefault()
           toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
             loading: `Saving ${row.original.header}`,
-            success: "Done",
+            success: "Booking",
             error: "Error",
           })
         }}>
@@ -220,7 +220,7 @@ const columns = [
           e.preventDefault()
           toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
             loading: `Saving ${row.original.header}`,
-            success: "Done",
+            success: "Booking",
             error: "Error",
           })
         }}>
@@ -724,11 +724,11 @@ function TableCellViewer({
                   <SelectValue placeholder="Select a reviewer" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Eddie Lake">Eddie Lake</SelectItem>
-                  <SelectItem value="Jamik Tashpulatov">
-                    Jamik Tashpulatov
+                  <SelectItem value="Christian">Admin Christian</SelectItem>
+                  <SelectItem value="U-Reserve">
+                    U-Reserve
                   </SelectItem>
-                  <SelectItem value="Emily Whalen">Emily Whalen</SelectItem>
+                  <SelectItem value="Admin Triemas">Triemas Putra</SelectItem>
                 </SelectContent>
               </Select>
             </div>

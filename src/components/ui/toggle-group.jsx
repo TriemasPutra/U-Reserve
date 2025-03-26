@@ -10,6 +10,9 @@ const ToggleGroupContext = React.createContext({
   variant: "default",
 })
 
+// Buat yang gak paham ini toogle group apa, coba lihat di sini: https://radix-ui.com/primitives/docs/components/toggle-group
+// Penjelasan singkat: Ini adalah komponen yang memungkinkan kita untuk mengelompokkan beberapa toggle button menjadi satu group tanpa harus menulis kode yang berulang-ulang.
+
 function ToggleGroup({
   className,
   variant,
