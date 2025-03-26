@@ -16,10 +16,14 @@ function hitungPresentase(jam) {
   return (jam / totalJam) * 100; // 100% adalah total jam dalam sebulan
 }
 
+// Buat function di atas sini
+
 export function SectionCards() {
   return (
     <div
       className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+
+      {/* Total Peminjaman Ruangan */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Total Peminjaman Ruangan</CardDescription>
@@ -42,6 +46,8 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
+
+      {/* Permohonan Peminjaman Ruangan */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Permohonan Peminjaman Ruangan</CardDescription>
@@ -51,6 +57,7 @@ export function SectionCards() {
           <CardAction>
             <Badge variant="outline">
               <IconTrendingDown />
+              {/* Masukkan logika kamu di sini */}
               {hitungPresentase(data.length).toFixed(2)}%
             </Badge>
           </CardAction>
@@ -64,6 +71,8 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
+
+      {/* Active Account ??? */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Active Accounts</CardDescription>
@@ -84,6 +93,8 @@ export function SectionCards() {
           <div className="text-muted-foreground">Engagement exceed targets</div>
         </CardFooter>
       </Card>
+
+      {/* ??? */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>???</CardDescription>
