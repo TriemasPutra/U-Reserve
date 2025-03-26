@@ -16,6 +16,13 @@ function hitungPresentase(jam) {
   return (jam / totalJam) * 100; // 100% adalah total jam dalam sebulan
 }
 
+const statusP = data.filter((item) => item.status === "In Process")
+function presentaseInProcess(data) {
+  const dataTotal = data.length;;
+  const totalPresentase = ((dataTotal - statusP.length) / dataTotal) * 100;
+  return totalPresentase;
+}
+
 // Buat function di atas sini
 
 export function SectionCards() {
@@ -52,19 +59,19 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>Permohonan Peminjaman Ruangan</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {JSON.stringify(data.length)}
+            {JSON.stringify(statusP.length)}
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingDown />
               {/* Masukkan logika kamu di sini */}
-              {hitungPresentase(data.length).toFixed(2)}%
+              {presentaseInProcess(data).toFixed(2)}%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Up 20% this period <IconTrendingDown className="size-4" />
+            {presentaseInProcess(data).toFixed(0)}% this period <IconTrendingDown className="size-4" />
           </div>
           <div className="text-muted-foreground">
             Mohon segera direspon
