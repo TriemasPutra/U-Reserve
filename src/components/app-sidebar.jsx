@@ -3,10 +3,14 @@
 import * as React from "react"
 import {
   BookOpen,
-  Bot,
   GalleryVerticalEnd,
   Settings2,
   SquareTerminal,
+  UserPen,
+  CircleHelp,
+  Info,
+  History,
+  House,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -29,65 +33,27 @@ const data = {
     {
       title: "Home",
       url: "#",
-      icon: SquareTerminal,
+      icon: House,
+    },
+    {
+      title: "Profile",
+      url: "#",
+      icon: UserPen,
+    },
+    {
+      title: "History",
+      url: "#",
+      icon: History,
     },
     {
       title: "About",
       url: "#",
-      icon: SquareTerminal,
+      icon: Info,
     },
     {
-      title: "eTicket",
-      url: "#",
-      icon: Bot,
-    },
-    {
-      title: "Calendar",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Academic",
-          url: "#",
-        },
-        {
-          title: "Student Activities",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Downloads",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "Bulletin",
-          url: "#",
-        },
-        {
-          title: "Catalogues",
-          url: "#",
-        },
-        {
-          title: "Scholarship Forms",
-          url: "#",
-        },
-        {
-          title: "Booklet",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Ruang Prestasi",
-      url: "#",
-      icon: SquareTerminal,
-      items: [
-        {
-          title: "Lomba",
-        },
-      ],
+      title: "FAQ",
+      url: "/faq",
+      icon: CircleHelp,
     },
   ],
 }
