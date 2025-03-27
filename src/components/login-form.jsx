@@ -29,7 +29,8 @@ export function LoginForm({
     if (email in data) {
       if (data[email].password === password) {
         // User found, return success
-        router.push('/user')
+        document.cookie = `user=${JSON.stringify(data[email])}; path=/; maxAge=3600;`;
+        router.push('/user');
       } else {
         // Password does not match
         console.log('Wrong Password.')
@@ -37,6 +38,7 @@ export function LoginForm({
     } else if (email in adminData) {
       if (adminData[email].password === password) {
         // User found, return success
+        document.cookie = `user=${JSON.stringify(adminData[email])}; path=/; maxAge=3600;`
         router.push('/admin')
       } else {
         // Password does not match
