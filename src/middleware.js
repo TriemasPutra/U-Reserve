@@ -2,9 +2,11 @@ import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 
 export async function middleware(req) {
-  const session = (await cookies()).getAll("session")?.value
-  console.log("session : ", session)
+  const cookieStore = cookies();
+  const session = cookieStore.get("session")?.value
+  
   if (!session && req.url !== "/login") {
+    console.log("session : ", session)
     const url = req.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.rewrite(url)
