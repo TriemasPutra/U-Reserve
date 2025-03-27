@@ -30,7 +30,7 @@ export function LoginForm({
       if (data[email].password === password) {
         // User found, return success
         document.cookie = `user=${JSON.stringify(data[email])}; path=/; maxAge=3600;`;
-        router.push('/user');
+        router.push('/user/userId');
       } else {
         // Password does not match
         console.log('Wrong Password.')
@@ -39,7 +39,7 @@ export function LoginForm({
       if (adminData[email].password === password) {
         // User found, return success
         document.cookie = `user=${JSON.stringify(adminData[email])}; path=/; maxAge=3600;`
-        router.push('/admin')
+        router.push('/admin/adminId')
       } else {
         // Password does not match
         console.log('Wrong Password.')
