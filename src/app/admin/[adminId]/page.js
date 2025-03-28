@@ -12,6 +12,7 @@ import data from "@/data/data.json"
 import data_user from "@/data/dummy.json"
 
 export default function Page() {
+
   return (
     <SidebarProvider
       style={
