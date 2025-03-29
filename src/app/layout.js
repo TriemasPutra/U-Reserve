@@ -31,7 +31,7 @@ export const metadata = {
     },
   ],
   creator: "Team 1",
-  manifest: "https://u-reserve.vercel.app/manifest.json",
+  manifest: "/manifest.json", // Updated to a relative path
   publisher: "U-Reserve",
   formatDetection: {
     telephone: true,
@@ -97,11 +97,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <body
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
-    {children}
-    </body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
