@@ -12,18 +12,16 @@ import {
 import data from "@/data/data.json"
 
 function hitungPresentase(jam) {
-  const totalJam = 730; // 24 jam * 30 hari atau 1 bulan
-  return (jam / totalJam) * 100; // 100% adalah total jam dalam sebulan
+  const totalJam = 720;
+  return (jam / totalJam) * 100;
 }
 
-const statusP = data.filter((item) => item.status === "In Process")
+const statusPending = data.filter((item) => item.status === "Pending");
+
 function presentaseInProcess(data) {
-  const dataTotal = data.length;;
-  const totalPresentase = ((dataTotal - statusP.length) / dataTotal) * 100;
-  return totalPresentase;
+  const dataTotal = data.length;
+  return ( statusPending.length / dataTotal) * 100;
 }
-
-// Buat function di atas sini
 
 export function SectionCards() {
   return (
@@ -59,7 +57,7 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>Permohonan Peminjaman Ruangan</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {JSON.stringify(statusP.length)}
+            {JSON.stringify(statusPending.length)}
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
