@@ -31,7 +31,7 @@ export const metadata = {
     },
   ],
   creator: "Team 1",
-  manifest: "/manifest.json", // Updated to a relative path
+  manifest: "https://u-reserve.vercel.app/manifest.json",
   publisher: "U-Reserve",
   formatDetection: {
     telephone: true,
