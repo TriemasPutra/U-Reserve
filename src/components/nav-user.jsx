@@ -1,7 +1,6 @@
 "use client"
 
 import {
-  IconCreditCard,
   IconDotsVertical,
   IconLogout,
   IconNotification,
@@ -34,6 +33,13 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar()
 
+  async function logOut() {
+    const d = new Date()
+    d.setTime(d.getTime() - 1)
+    let expireTime = d.toUTCString()
+    document.cookie = `role=; path=/; expires=${expireTime};`
+    window.location.reload()
+  }
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -81,18 +87,14 @@ export function NavUser({
                 Account
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconCreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
                 <IconNotification />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={logOut}>
               <IconLogout />
-              Log out
+              Sign Out
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
