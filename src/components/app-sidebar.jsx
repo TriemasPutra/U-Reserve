@@ -35,7 +35,7 @@ import {
 
 const data = {
   user: {
-    email: "triemas.412024018@civitas.ukrida.ac.id",
+    email: "triemas.putra@gmail.com",
     name: "Raiden Shogun",
     avatar: "https://cdn.rafled.com/anime-icons/images/u05vyKyGsL73WKPM1iFIkoW7tQ05Ghk8.jpg",
   },
