@@ -2,11 +2,8 @@
 
 import * as React from "react"
 import {
-  BookOpen,
   Bot,
   GalleryVerticalEnd,
-  Settings2,
-  SquareTerminal,
   UserPen,
   CircleHelp,
   Info,
