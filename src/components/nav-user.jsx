@@ -106,11 +106,9 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem >
-              <DropdownMenuItem onSelect={() => setIsLogoutDialogOpen(true)}>
-                <IconLogout />
-                Sign Out
-              </DropdownMenuItem>
+            <DropdownMenuItem onSelect={() => setIsLogoutDialogOpen(true)}>
+              <IconLogout />
+              Sign Out
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
