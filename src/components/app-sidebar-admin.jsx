@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
 import {
   BarChartIcon,
   ClipboardListIcon,
@@ -163,26 +162,7 @@ export function AppSidebar(props) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser
-          user={{
-            ...data.user,
-            avatar: (
-              <Image
-                src={data.user.avatar}
-                alt={data.user.name}
-                width={40}
-                height={40}
-                loader={({ src }) => src}
-                unoptimized
-                onError={(e) => {
-                  e.currentTarget.src = "/fallback-avatar.png"
-                }}
-                placeholder="blur"
-                blurDataURL="/placeholder.png"
-              />
-            ),
-          }}
-        />
+        <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
   )
