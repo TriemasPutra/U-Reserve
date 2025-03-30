@@ -116,7 +116,7 @@ export function NavUser({
       <AlertDialog open={isLogoutDialogOpen} onOpenChange={setIsLogoutDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>Do you want to continue?</AlertDialogTitle>
             <AlertDialogDescription>
               This action makes you sign out from your account. You will be redirected to the login page. This action cannot be undone.
             </AlertDialogDescription>
