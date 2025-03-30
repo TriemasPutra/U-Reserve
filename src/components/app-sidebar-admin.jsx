@@ -175,7 +175,7 @@ export function AppSidebar(props) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        {/* Ini umntuk component calendar automatic update ygy yg mao add logic disini tambahin aja ygy*/}
+        {/* This is for the calendar component with auto-update. Add logic here as needed. */}
         <SidebarMenu>
           <Calendar
             mode="single"
