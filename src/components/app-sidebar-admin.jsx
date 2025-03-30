@@ -12,6 +12,8 @@ import {
   SearchIcon,
   SettingsIcon,
   UsersIcon,
+  Inbox,
+  Trash2,
 } from "lucide-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -65,6 +67,16 @@ const data = {
       title: "Logs",
       url: "/logs",
       icon: ClipboardListIcon,
+    },
+    {
+      title: "Inbox",
+      url: "/inbox",
+      icon: Inbox,
+    },
+    {
+      title: "Trash",
+      url: "/trash",
+      icon: Trash2,
     },
   ],
   navClouds: [
