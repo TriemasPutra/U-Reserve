@@ -27,6 +27,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { Calendar } from "@/components/ui/calendar"
 
 const data = {
   user: {
@@ -162,6 +163,15 @@ export function AppSidebar(props) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
+        {/* Ini umntuk component calendar automatic update ygy yg mao add logic disini tambahin aja ygy*/}
+        <SidebarMenu>
+          <Calendar
+            mode="single"
+            selected={new Date()}
+            onSelect={() => {}}
+            className="rounded-md border"
+          />
+        </SidebarMenu>
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
