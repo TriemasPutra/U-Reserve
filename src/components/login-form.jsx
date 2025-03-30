@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import studentData from '../data/dummy.json'
 import adminData from '../data/dummy2.json'
+import { encrypt } from "@/lib/crypt"
 
 // Buat yang gak paham ini apa? Ini adalah komponen form login yang akan menampilkan form login kepada pengguna.
 // Jadi, ketika pengguna membuka aplikasi, pengguna akan melihat form login ini.
@@ -31,10 +32,14 @@ export function LoginForm({
     let expireTime = d.toUTCString();
     if (email in studentData || email in adminData) {
       if (studentData[email]?.password === password) {
-        document.cookie = `role=student; path=/; expires=${expireTime};`;
+        const encrypted = encrypt(['S', ',', d.getSeconds()])
+        document.cookie = `role=${encrypted}; path=/; expires=${expireTime};`;
+        document.cookie = `user=${JSON.stringify(studentData[email])}; path=/; expires=${expireTime};`;
         router.push('/user')
       } else if (adminData[email]?.password === password) {
-        document.cookie = `role=admin; path=/; expires=${expireTime};`;
+        const encrypted = encrypt(['A', ',', d.getSeconds()])
+        document.cookie = `role=${encrypted}; path=/; expires=${expireTime};`;
+        document.cookie = `user=${JSON.stringify(adminData[email])}; path=/; expires=${expireTime};`;
         router.push('/admin')
       } else {
         // Password does not match

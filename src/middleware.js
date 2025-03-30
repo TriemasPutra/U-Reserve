@@ -1,16 +1,17 @@
-import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
+import { decrypt } from "@/lib/crypt"
 
 export function middleware(request) {
-  const role = request.cookies.get('role')?.value
+  const role = request.cookies.get('role')?.value;
+  const decryptedRole = decrypt(role);
   const url = request.nextUrl.clone();
-  if (role !== 'student' && role !== 'admin' && url.pathname !== '/login') {
+  if (decryptedRole !== 'S' && decryptedRole !== 'A' && url.pathname !== '/login') {
     url.pathname = "/login";
     return NextResponse.rewrite(url);
-  } else if (role === 'student') {
+  } else if (decryptedRole === 'S') {
     url.pathname = "/user";
     return NextResponse.rewrite(url);
-  } else if (role === 'admin') {
+  } else if (decryptedRole === 'A') {
     url.pathname = "/admin";
     return NextResponse.rewrite(url);
   }

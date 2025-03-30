@@ -52,6 +52,7 @@ export function NavUser({
     d.setTime(d.getTime() - 1)
     let expireTime = d.toUTCString()
     document.cookie = `role=; path=/; expires=${expireTime};`
+    document.cookie = `user=; path=/; expires=${expireTime};`
     window.location.reload()
   }
   return (
