@@ -30,7 +30,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { Calendar } from "@/components/ui/calendar"
-import { getCookies } from "@/lib/utils"
+import { getCookies } from "@/lib/cookies"
 
 const data = {
   user: getCookies("user"),

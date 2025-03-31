@@ -11,13 +11,13 @@
         "email":"9999@civitas.ukrida.ac.id",
         "role":"Admin-Lab",
         "password":"Admin1234",
-        "avatar":""
+        "avatar":"https://play.pokemonshowdown.com/sprites/trainers/clair.png"
     },
     "8888": {
         "name": "Admin-Room",
         "email":"9999@civitas.ukrida.ac.id",
         "role":"Admin-Room",
         "password":"Admin4321",
-        "avatar":""
+        "avatar":"https://play.pokemonshowdown.com/sprites/trainers/flint.png"
     }
 }

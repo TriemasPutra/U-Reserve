@@ -26,7 +26,7 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar"
 
-import { getCookies } from "@/lib/utils"
+import { getCookies } from "@/lib/cookies"
 
 const data = {
   user: getCookies("user"),
@@ -73,7 +73,6 @@ const data = {
 export function AppSidebar({
   ...props
 }) {
-  console.log(data.user)
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
