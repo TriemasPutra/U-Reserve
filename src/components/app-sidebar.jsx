@@ -64,7 +64,7 @@ const data = {
     },
     {
       title: "FAQ",
-      url: "/faq",
+      url: "/user/faq",
       icon: CircleHelp,
     },
   ],
