@@ -20,14 +20,20 @@ export function clearActiveUser() {
     }
 }
 
-export function deleteActiveUser(username) {
+export async function deleteActiveUser(username) {
     const data = JSON.parse(readFileSync(activeUserFilePath, 'utf8'));
     if (data[username]) {
         delete data[username];
         writeFileSync(activeUserFilePath, JSON.stringify(data), 'utf8');
-        console.log(`Active user ${username} deleted.`);
+        return {
+            success: true,
+            message: 'Logout successful',
+        };
     } else {
-        console.log(`No active user found with username: ${username}`);
+        return {
+            success: false,
+            message: 'User not found',
+        };
     }
 }
 

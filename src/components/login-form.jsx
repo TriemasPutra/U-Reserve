@@ -22,7 +22,7 @@ export function LoginForm({
   const [failedAttempts, setFailedAttempts] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
   const [resetTimeout, setResetTimeout] = useState(null);
-  const MAX_FAILED_ATTEMPTS = 3;
+  const MAX_FAILED_ATTEMPTS = 4; // Maximum number of failed attempts before lockout = 5
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -34,12 +34,11 @@ export function LoginForm({
     const password = formData.get('password');
 
     function handleFailedAttempt() {
-      setFailedAttempts((prev) => {
-        const newCount = prev + 1;
-        if (newCount >= MAX_FAILED_ATTEMPTS) {
+      setFailedAttempts(() => {
+        if (failedAttempts >= MAX_FAILED_ATTEMPTS) {
           setIsLocked(true);
         }
-        return newCount;
+        return failedAttempts + 1;
       });
 
       // Clear any existing timeout and set a new one to reset the counter
@@ -61,7 +60,7 @@ export function LoginForm({
         'Content-Type': 'application/json',
       },
     });
-    
+
     if (response.ok) {
       const role = getCookies('role');
       if (role === 'Student') {
