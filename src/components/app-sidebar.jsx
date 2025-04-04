@@ -26,19 +26,10 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar"
 
-// function getCookies(name) {
-//   const value = `; ${document.cookie}`;
-//   const parts = value.split(`; ${name}=`);
-//   if (parts.length === 2) return parts.pop().split(";").shift();
-//   return null;
-// }
+import { getCookies } from "@/lib/cookies"
 
 const data = {
-  user: {
-    email: "triemas.putra@gmail.com",
-    name: "Raiden Shogun",
-    avatar: "https://cdn.rafled.com/anime-icons/images/u05vyKyGsL73WKPM1iFIkoW7tQ05Ghk8.jpg",
-  },
+  user: getCookies("user"),
   teams: [
     {
       name: "U-Reserve",
@@ -73,7 +64,7 @@ const data = {
     },
     {
       title: "FAQ",
-      url: "/faq",
+      url: "/user/faq",
       icon: CircleHelp,
     },
   ],
