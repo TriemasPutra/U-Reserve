@@ -28,7 +28,7 @@ export async function login(user) {
     const cookieStore = await cookies();
     cookieStore.set('role', encryptedRole, {maxAge: 60*60, path: '/'});
     cookieStore.set('user', encryptedData, {maxAge: 60*60, path: '/'});
-    setActiveUser(NIM, JSON.stringify(data));
+    // setActiveUser(NIM, JSON.stringify(data));
     return {
       success: true,
       message: 'Login successful',
