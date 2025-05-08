@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { getCookies } from "@/lib/cookies"
 
 // Buat yang gak paham ini apa? Ini adalah komponen form login yang akan menampilkan form login kepada pengguna.
@@ -24,6 +24,14 @@ export function LoginForm({
   const [resetTimeout, setResetTimeout] = useState(null);
   const MAX_FAILED_ATTEMPTS = 4; // Maximum number of failed attempts before lockout = 5
 
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  if (!isClient) {
+    return null; // Prevent rendering on the server
+  }
+  
   async function handleSubmit(event) {
     event.preventDefault();
 
