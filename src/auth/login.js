@@ -12,9 +12,11 @@ export async function login(user) {
   if (NIM in studentData || NIM in adminData) {
     if (studentData[NIM]?.password === password) {
       data = studentData[NIM];
+      data['NIM'] = NIM;
       encryptedRole = encryptRole('Student', data.email, data.name, true, d);
     } else if (adminData[NIM]?.password === password) {
       data = adminData[NIM];
+      data['NIM'] = NIM;
       encryptedRole = encryptRole('Admin', data.email, data.name, true, d);
     } else {
       return {
