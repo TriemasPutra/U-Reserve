@@ -49,7 +49,7 @@ const data = {
     },
     {
       title: "History",
-      url: "#",
+      url: "/user/history",
       icon: History,
     },
     {
