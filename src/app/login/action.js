@@ -1,37 +1,59 @@
 'use server'
 
-import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
-
 import { createClient } from '@/utils/supabase/server'
 
 export async function login(credentials) {
   const supabase = await createClient()
 
-  // type-casting here for convenience
-  // in practice, you should validate your inputs
-
   const { data:user, error } = await supabase
-  .from('users',)
-  .select('user_id, password_hash, role')
+  .from('users')
+  .select('email')
   .eq('user_id', credentials['user_id'])
-  .single(); 
+  .single();
 
-  if (error || !user) {
-    redirect('/error');
-  }
+  // Sign-up user
+  // const { data:userData, error:userError } = await supabase.auth.signUp({
+  //   email: user.email,
+  //   password: credentials['password_hash'],
+  //   options:{
+  //     data: {
+  //       user_id: credentials['user_id'],
+  //       username: user.username,
+  //       email: user.email,
+  //       prodi: user.prodi,
+  //       role: user.role,
+  //       avatar: user.avatar
+  //     },
+  //   }
+  // })
+  // console.log('\nlogin\n', userData, userError);
 
-    const isPasswordValid = credentials['password_hash'] === user.password_hash;
-    console.log(isPasswordValid, user, credentials['password_hash'], user.password_hash);
-  if (isPasswordValid) {
-    if (user.role === 'admin') {
-      redirect('/admin');
-    } else if (user.role === 'student') {
-      redirect('/user');
-    } else {
-      redirect('/error');
-    }
+  const { data: userData, error: userError } = await supabase.auth.signInWithPassword({
+    email: user.email,
+    password: credentials['password_hash'],
+  })
+
+  if (userError) {
+    return { status: 401, }
+  } else if (userData.user.user_metadata.role === 'admin') {
+    redirect('/admin');
+  } else if (userData.user.user_metadata.role === 'student') {
+    redirect('/user');
   } else {
-    redirect('/error');
+    return { status: 401, }
   }
+  // console.log(userData.user.user_metadata.role);
+  // const isPasswordValid = credentials['password_hash'] === user.password_hash;
+  // if (isPasswordValid) {
+  //   if (user.role === 'admin') {
+  //     redirect('/admin');
+  //   } else if (user.role === 'student') {
+  //     redirect('/user');
+  //   } else {
+  //     // redirect('/error');
+  //   }
+  // } else {
+  //   // redirect('/error');
+  // }
 }
