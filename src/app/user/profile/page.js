@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState,useEffect, useRef } from "react"
 import { Camera, Eye, EyeOff, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,7 +14,16 @@ export default function ProfilePage() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const fileInputRef = useRef(null)
+  const [isClient, setIsClient] = useState(false);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Prevent rendering on the server
+  }
+  
   const handleImageChange = (e) => {
     const file = e.target.files?.[0]
     if (file) {
@@ -51,20 +60,14 @@ export default function ProfilePage() {
                     <AvatarImage src={profileImage || "/placeholder.svg"} alt="Profile" />
                     <AvatarFallback className="text-2xl">JD</AvatarFallback>
                   </Avatar>
-                  <div
-                    className="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-md cursor-pointer"
-                    onClick={() => fileInputRef.current?.click()}
-                  >
-                    <Camera size={18} />
-                  </div>
                 </div>
                 <input type="file" accept="image/*" ref={fileInputRef} onChange={handleImageChange} className="hidden" />
-                <CardTitle className="mt-4 text-xl font-bold">Profil Pengguna</CardTitle>
+                <CardTitle className="mt-4 text-xl font-bold">Profile</CardTitle>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Nama</label>
+                    <label className="text-sm font-medium">Name</label>
                     <div className="relative">
                       <Input type="text" value="DUMMY NAME" readOnly className="pr-10 bg-gray-50" />
                     </div>
@@ -114,35 +117,8 @@ export default function ProfilePage() {
                   className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-lg w-full"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="p-1 absolute top-2 right-2 z-10">
-                    <Button
-                      variant="destructive"
-                      size="icon"
-                      className="rounded-full h-8 w-8"
-                      onClick={() => setIsPopupOpen(false)}
-                    >
-                      <X size={16} />
-                    </Button>
-                  </div>
-                  <div className="p-2">
-                    <img
-                      src={profileImage || "/placeholder.svg"}
-                      alt="Profile"
-                      className="w-full aspect-square object-cover rounded"
-                    />
-                  </div>
+                  
                   <div className="p-4 bg-white flex justify-between">
-                    <Button variant="outline" onClick={() => setIsPopupOpen(false)}>
-                      Tutup
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        fileInputRef.current?.click()
-                        setIsPopupOpen(false)
-                      }}
-                    >
-                      Ganti Foto
-                    </Button>
                   </div>
                 </div>
               </div>
