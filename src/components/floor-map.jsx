@@ -38,69 +38,7 @@ export function FloorMap({ className, floorObject, ...props }) {
     // Clear existing SVG content
     svgElement.innerHTML = "";
 
-    // Calculate the bounding box of all paths
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-
-    Object.keys(floorObject.floorImage).forEach((roomKey) => {
-      const room = floorObject.floorImage[roomKey];
-      if (roomKey.startsWith("room") && room.path) {
-        const pathElement = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        pathElement.setAttribute("d", room.path);
-
-        // Temporarily append the path to calculate its bounding box
-        const tempSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        tempSvg.appendChild(pathElement);
-        document.body.appendChild(tempSvg);
-        const bbox = pathElement.getBBox();
-        document.body.removeChild(tempSvg);
-
-        minX = Math.min(minX, bbox.x);
-        minY = Math.min(minY, bbox.y);
-        maxX = Math.max(maxX, bbox.x + bbox.width);
-        maxY = Math.max(maxY, bbox.y + bbox.height);
-      } else if (roomKey.startsWith("name") && room.type === "text") {
-        const textElement = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        // textElement.textContent = room.name;
-        textElement.setAttribute("font-size", "80");
-        textElement.setAttribute("font-weight", "bold");
-        textElement.setAttribute("fill", "black");
-
-        Object.keys(room.span).forEach((spanKey) => {
-          const span = room.span[spanKey];
-          const spanElement = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-          spanElement.textContent = span.text;
-          spanElement.setAttribute("x", span.x);
-          spanElement.setAttribute("y", span.y);
-          textElement.appendChild(spanElement);
-        });
-
-        // Temporarily append the text to calculate its bounding box
-        const tempSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        tempSvg.appendChild(textElement);
-        document.body.appendChild(tempSvg);
-        const bbox = textElement.getBBox();
-        document.body.removeChild(tempSvg);
-
-        minX = Math.min(minX, bbox.x);
-        minY = Math.min(minY, bbox.y);
-        maxX = Math.max(maxX, bbox.x + bbox.width);
-        maxY = Math.max(maxY, bbox.y + bbox.height);
-      }
-    });
-
-    const contentWidth = maxX - minX;
-    const contentHeight = maxY - minY;
-
-    // Calculate scaling factors to fit the paths inside the canvas
-    const scaleX = dimensions.width / contentWidth;
-    const scaleY = dimensions.height / contentHeight;
-    const scale = Math.min(scaleX, scaleY);
-
-    // Calculate translation to center the paths
-    const translateX = -minX * scale + (dimensions.width - contentWidth * scale) / 2;
-    const translateY = -minY * scale + (dimensions.height - contentHeight * scale) / 2;
-
-    // Draw and scale each path
+    // Draw and scale each path & text
     Object.keys(floorObject.floorImage).forEach((roomKey) => {
       const room = floorObject.floorImage[roomKey];
 
@@ -118,7 +56,7 @@ export function FloorMap({ className, floorObject, ...props }) {
         // Apply scaling and translation
         pathElement.setAttribute(
           "transform",
-          `translate(${translateX}, ${translateY}) scale(${scale})`
+          `scale(${dimensions.width / floorObject.floorImage.originalX}, ${dimensions.height / floorObject.floorImage.originalY})`
         );
 
         // Add hover interactivity
@@ -142,8 +80,8 @@ export function FloorMap({ className, floorObject, ...props }) {
         svgElement.appendChild(pathElement);
       } else if (roomKey.startsWith("name") && room.type === "text") {
         const textElement = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        // textElement.textContent = room.name;
-        textElement.setAttribute("font-size", "80");
+        textElement.textContent = room.text;
+        textElement.setAttribute("font-size", "0.75em");
         textElement.setAttribute("font-weight", "bold");
         textElement.setAttribute("fill", "black");
         textElement.setAttribute("text-anchor", "middle");
@@ -151,22 +89,10 @@ export function FloorMap({ className, floorObject, ...props }) {
         textElement.setAttribute("xml:space", "preserve");
         textElement.setAttribute("letter-spacing", "0em");
         textElement.setAttribute("cursor", "pointer");
-
-        Object.keys(room.span).forEach((spanKey) => {
-          const span = room.span[spanKey];
-          const spanElement = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-          spanElement.textContent = span.text;
-          spanElement.setAttribute("x", span.x);
-          spanElement.setAttribute("y", span.y);
-          textElement.appendChild(spanElement);
-        });
-
-        // Apply scaling and translation
-        textElement.setAttribute(
-          "transform",
-          `translate(${translateX+7}, ${translateY}) scale(${scale})`
-        );
-
+        
+        textElement.setAttribute("x", room.x * dimensions.width / floorObject.floorImage.originalX);
+        textElement.setAttribute("y", room.y * dimensions.height / floorObject.floorImage.originalY);
+        
         // Append the text to the SVG
         svgElement.appendChild(textElement);
       }      
@@ -181,6 +107,7 @@ export function FloorMap({ className, floorObject, ...props }) {
         height={dimensions.height}
         viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
         {...props}
       />
       {showPopup && (
