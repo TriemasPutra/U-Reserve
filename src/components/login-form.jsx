@@ -36,11 +36,23 @@ export function LoginForm({
     const NIM = formData.get('NIM');
     const password = formData.get('password');
     
-    const response = await login({user_id: NIM, password_hash: password});
+    // const response = await login({user_id: NIM, password_hash: password});
+    const response = await fetch('/api/login/', {
+      method: 'POST',
+      body: JSON.stringify({ user_id: NIM, password_hash: password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
     if (response.status === 401) {
       handleFailedAttempt();
       return;
+    } else if (response.status === 200) {
+      const data = await response.json();
+      if (data.redirectUrl) {
+        router.push(data.redirectUrl);
+      }
     }
 
     function handleFailedAttempt() {

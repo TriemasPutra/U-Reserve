@@ -56,13 +56,17 @@ export function NavUser({
   }
 
   async function logOut() {
-    await fetch("/auth/signout/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({}),
+    // await fetch("/auth/signout/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({}),
+    // })
+    await fetch("/api/logout/", {
+      method: "GET",
     })
+
     document.cookie.split(';').forEach(cookie => {
       const eqPos = cookie.indexOf('=');
       const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
