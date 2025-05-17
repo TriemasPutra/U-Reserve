@@ -27,6 +27,14 @@ export function LoginForm({
   const [resetTimeout, setResetTimeout] = useState(null);
   const MAX_FAILED_ATTEMPTS = 3;
 
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  if (!isClient) {
+    return null; // Prevent rendering on the server
+  }
+  
   async function handleSubmit(event) {
     event.preventDefault();
 
