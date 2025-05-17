@@ -6,11 +6,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
-import studentData from '../data/dummy.json'
-import adminData from '../data/dummy2.json'
-import { encrypt } from "@/lib/crypt"
-import { useState } from "react"
-import { login } from "@/app/login/action"
+import { useEffect, useState } from "react"
+import { getCookies } from "@/lib/cookies"
 
 // Buat yang gak paham ini apa? Ini adalah komponen form login yang akan menampilkan form login kepada pengguna.
 // Jadi, ketika pengguna membuka aplikasi, pengguna akan melihat form login ini.
@@ -27,6 +24,14 @@ export function LoginForm({
   const [resetTimeout, setResetTimeout] = useState(null);
   const MAX_FAILED_ATTEMPTS = 3;
 
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  if (!isClient) {
+    return null; // Prevent rendering on the server
+  }
+  
   async function handleSubmit(event) {
     event.preventDefault();
 
