@@ -182,8 +182,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet",
-                "x": 119.469,
-                "y": 521.273
+                "x": 160,
+                "y": 520
             },
             "room4": {
                 "clickable": "true",
@@ -195,8 +195,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E306",
-                "x": 1050.53,
-                "y": 358.085
+                "x": 1100,
+                "y": 360
             },
             "room5": {
                 "clickable": "true",
@@ -208,8 +208,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E304",
-                "x": 213.031,
-                "y": 1034.77
+                "x": 250,
+                "y": 1040
             },
             "room6": {
                 "clickable": "true",
@@ -221,8 +221,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E307",
-                "x": 1052.84,
-                "y": 1004.16
+                "x": 1100,
+                "y": 1005
             },
             "room7": {
                 "clickable": "true",
@@ -234,8 +234,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E305",
-                "x": 211.969,
-                "y": 1551.27
+                "x": 250,
+                "y": 1550
             },
             "room8": {
                 "clickable": "true",
@@ -247,8 +247,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E308",
-                "x": 1050.78,
-                "y": 1551.27
+                "x": 1100,
+                "y": 1550
             },
             "room9": {
                 "clickable": "true",
@@ -260,8 +260,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E303",
-                "x": 212.125,
-                "y": 2019.77
+                "x": 250,
+                "y": 2020
             },
             "room10": {
                 "clickable": "true",
@@ -273,8 +273,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E309",
-                "x": 1050.53,
-                "y": 1914.77
+                "x": 1100,
+                "y": 1915
             },
             "room11": {
                 "clickable": "true",
@@ -286,8 +286,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E310",
-                "x": 1055.62,
-                "y": 2224.77
+                "x": 1100,
+                "y": 2225
             },
             "room12": {
                 "clickable": "true",
@@ -299,8 +299,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E302",
-                "x": 213.125,
-                "y": 2445.27
+                "x": 250,
+                "y": 2445
             },
             "room13": {
                 "clickable": "true",
@@ -312,8 +312,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "E301",
-                "x": 217.625,
-                "y": 2848.27
+                "x": 250,
+                "y": 2850
             },
             "room14": {
                 "clickable": "false",
@@ -354,8 +354,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet Pria",
-                "x": 72.625,
-                "y": 138.773
+                "x": 120,
+                "y": 140
             },
             "room2": {
                 "clickable": "false",
@@ -367,15 +367,15 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet",
-                "x": 68.627,
-                "y": 318.318
+                "x": 100,
+                "y": 320
             },
             "name3": {
                 "clickable": "false",
                 "type": "text",
                 "text": "Wanita",
-                "x": 49.6719,
-                "y": 391.318
+                "x": 100,
+                "y": 395
             },
             "room3": {
                 "clickable": "false",
@@ -392,8 +392,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Staff Room",
-                "x": 703.594,
-                "y": 384.273
+                "x": 775,
+                "y": 370
             },
             "room5": {
                 "clickable": "true",
@@ -405,8 +405,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A4COL1",
-                "x": 100.781,
-                "y": 618.773
+                "x": 140,
+                "y": 600
             },
             "room6": {
                 "clickable": "true",
@@ -418,8 +418,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A4EMP2",
-                "x": 690.276,
-                "y": 637.773
+                "x": 775,
+                "y": 640
             },
             "room7": {
                 "clickable": "false",
@@ -446,8 +446,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A4EMP1",
-                "x": 685.623,
-                "y": 1086.92
+                "x": 775,
+                "y": 1090
             },
             "room11": {
                 "clickable": "true",
@@ -459,8 +459,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A4EPW2",
-                "x": 82.7863,
-                "y": 1701.47
+                "x": 140,
+                "y": 1750
             },
             "room12": {
                 "clickable": "true",
@@ -472,8 +472,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A4EPW1",
-                "x": 683.716,
-                "y": 1701.47
+                "x": 775,
+                "y": 1750
             }
         },
         "Floor 5": {
@@ -489,8 +489,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet Pria",
-                "x": 73.625,
-                "y": 138.773
+                "x": 120,
+                "y": 140
             },
             "room2": {
                 "clickable": "false",
@@ -502,15 +502,15 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet",
-                "x": 69.627,
-                "y": 318.318
+                "x": 100,
+                "y": 320
             },
             "name3": {
                 "clickable": "false",
                 "type": "text",
                 "text": "Wanita",
-                "x": 50.6719,
-                "y": 391.318
+                "x": 100,
+                "y": 395
             },
             "room3": {
                 "clickable": "false",
@@ -527,8 +527,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5FAI2",
-                "x": 705.71,
-                "y": 424.399
+                "x": 770,
+                "y": 425
             },
             "room5": {
                 "clickable": "true",
@@ -540,8 +540,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5FAI1",
-                "x": 118.562,
-                "y": 618.773
+                "x": 170,
+                "y": 620
             },
             "room6": {
                 "clickable": "true",
@@ -553,8 +553,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5TRU2",
-                "x": 686.762,
-                "y": 668.411
+                "x": 770,
+                "y": 660
             },
             "room7": {
                 "clickable": "false",
@@ -576,8 +576,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5TRU1",
-                "x": 691.262,
-                "y": 959.697
+                "x": 770,
+                "y": 930
             },
             "room10": {
                 "clickable": "false",
@@ -594,8 +594,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5.505",
-                "x": 723.043,
-                "y": 1224.57
+                "x": 770,
+                "y": 1210
             },
             "room12": {
                 "clickable": "true",
@@ -607,8 +607,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5.506",
-                "x": 686.762,
-                "y": 1400.41
+                "x": 770,
+                "y": 1400
             },
             "room13": {
                 "clickable": "true",
@@ -620,8 +620,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5INS1",
-                "x": 108.562,
-                "y": 1793.27
+                "x": 170,
+                "y": 1795
             },
             "room14": {
                 "clickable": "true",
@@ -633,8 +633,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5.507",
-                "x": 724.855,
-                "y": 1715.37
+                "x": 770,
+                "y": 1715
             },
             "room15": {
                 "clickable": "true",
@@ -646,8 +646,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A5.508",
-                "x": 722.793,
-                "y": 2045.77
+                "x": 770,
+                "y": 2030
             }
         },
         "Floor 6": {
@@ -663,8 +663,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet Pria",
-                "x": 72.625,
-                "y": 138.773
+                "x": 120,
+                "y": 140
             },
             "room2": {
                 "clickable": "false",
@@ -676,15 +676,15 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet",
-                "x": 68.627,
-                "y": 318.318
+                "x": 100,
+                "y": 320
             },
             "name3": {
                 "clickable": "false",
                 "type": "text",
                 "text": "Wanita",
-                "x": 49.6719,
-                "y": 391.318
+                "x": 100,
+                "y": 395
             },
             "room3": {
                 "clickable": "false",
@@ -701,8 +701,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6AGI3",
-                "x": 697.476,
-                "y": 376.273
+                "x": 800,
+                "y": 370
             },
             "room5": {
                 "clickable": "true",
@@ -714,8 +714,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6AGI2",
-                "x": 114.359,
-                "y": 114.359
+                "x": 180,
+                "y": 570
             },
             "room6": {
                 "clickable": "true",
@@ -727,8 +727,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6AGI4",
-                "x": 698.043,
-                "y": 573.457
+                "x": 800,
+                "y": 560
             },
             "room7": {
                 "clickable": "true",
@@ -740,8 +740,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6AGI1",
-                "x": 111.75,
-                "y": 777.273
+                "x": 180,
+                "y": 760
             },
             "room8": {
                 "clickable": "true",
@@ -753,8 +753,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6INN1",
-                "x": 700.824,
-                "y": 848.957
+                "x": 800,
+                "y": 830
             },
             "room9": {
                 "clickable": "false",
@@ -767,6 +767,11 @@
                 "path": "M221 1116H441.5M221 1116L441.5 954M221 1116L221 954M441.5 1116V954M441.5 1116L221 954M441.5 954L221 954"
             },
             "room11": {
+                "clickable": "false",
+                "type": "stair",
+                "path": "M435 1179.75H48.3333L48.3333 1307.25H435M432.43 1179.75L406 1156.91M406 1202.42L432.43 1179.58M435 1247.04H96.6667M92.6389 1371L92.6389 1116M140.972 1371L140.972 1116M189.306 1371L189.306 1116M237.639 1371L237.639 1116M285.972 1371V1116M334.306 1371V1116M382.639 1371V1116M435 1116H0L0 1371H435V1116Z"
+            },
+            "room12": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A6INN2",
@@ -776,10 +781,10 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6INN2",
-                "x": 696.601,
-                "y": 1203.27
+                "x": 800,
+                "y": 1190
             },
-            "room12": {
+            "room13": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A6PIO3",
@@ -789,10 +794,10 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6PIO3",
-                "x": 101.229,
-                "y": 1582.77
+                "x": 180,
+                "y": 1570
             },
-            "room13": {
+            "room14": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A6INN3",
@@ -802,10 +807,10 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6INN3",
-                "x": 695.601,
-                "y": 1582.77
+                "x": 800,
+                "y": 1570
             },
-            "room14": {
+            "room15": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A6PIO2",
@@ -815,23 +820,23 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6PIO2",
-                "x": 11.875,
-                "y": 1981.77
+                "x": 120,
+                "y": 1970
             },
-            "room15": {
+            "room16": {
                 "clickable": "true",
                 "type": "classroom",
-                "name": "A6PINN4",
+                "name": "A6INN4",
                 "path": "M812.099 1803.29L786.216 1752.36C785.201 1750.36 786.651 1748 788.89 1748H1036C1037.66 1748 1039 1749.34 1039 1751V2166C1039 2167.66 1037.66 2169 1036 2169H787C785.343 2169 784 2167.66 784 2166V1820.17Z"
             },
             "name15": {
                 "clickable": "false",
                 "type": "text",
                 "text": "A6INN4",
-                "x": 790.169,
-                "y": 1981.77
+                "x": 900,
+                "y": 1970
             },
-            "room16": {
+            "room17": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A6PIO1",
@@ -841,8 +846,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A6PIO1",
-                "x": 413.862,
-                "y": 2081.77
+                "x": 500,
+                "y": 2080
             }
         },
         "Floor7": {
@@ -858,8 +863,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet Pria",
-                "x": 72.625,
-                "y": 138.773
+                "x": 120,
+                "y": 140
             },
             "room2": {
                 "clickable": "false",
@@ -871,15 +876,15 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "Toilet",
-                "x": 68.627,
-                "y": 318.318
+                "x": 100,
+                "y": 320
             },
             "name3": {
                 "clickable": "false",
                 "type": "text",
                 "text": "Wanita",
-                "x": 49.6719,
-                "y": 391.318
+                "x": 100,
+                "y": 395
             },
             "room3": {
                 "clickable": "false",
@@ -896,8 +901,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7DIS1",
-                "x": 704.569,
-                "y": 394.273
+                "x": 780,
+                "y": 395
             },
             "room5": {
                 "clickable": "true",
@@ -909,8 +914,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A704",
-                "x": 146.059,
-                "y": 541.818
+                "x": 180,
+                "y": 540
             },
             "room6": {
                 "clickable": "true",
@@ -922,8 +927,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7DIS2",
-                "x": 700.068,
-                "y": 608.504
+                "x": 780,
+                "y": 610
             },
             "room7": {
                 "clickable": "true",
@@ -935,8 +940,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A703",
-                "x": 146.205,
-                "y": 709.818
+                "x": 180,
+                "y": 710
             },
             "room8": {
                 "clickable": "true",
@@ -948,8 +953,8 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7GOA1",
-                "x": 688.851,
-                "y": 882.088
+                "x": 780,
+                "y": 860
             },
             "room9": {
                 "clickable": "false",
@@ -967,6 +972,11 @@
                 "path": "M214 1116H434.5M214 1116L434.5 954M214 1116L214 954M434.5 1116V954M434.5 1116L214 954M434.5 954L214 954"
             },
             "room12": {
+                "clickable": "false",
+                "type": "stair",
+                "path": "M435 1179.75H48.3333L48.3333 1307.25H435M432.43 1179.75L406 1156.91M406 1202.42L432.43 1179.58M435 1247.04H96.6667M92.6389 1371L92.6389 1116M140.972 1371L140.972 1116M189.306 1371L189.306 1116M237.639 1371L237.639 1116M285.972 1371V1116M334.306 1371V1116M382.639 1371V1116M435 1116H0L0 1371H435V1116Z"
+            },
+            "room13": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A7GOA2",
@@ -976,10 +986,10 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7GOA2",
-                "x": 683.257,
-                "y": 1219.77
+                "x": 780,
+                "y": 1220
             },
-            "room13": {
+            "room14": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A7GOA3",
@@ -989,17 +999,17 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7GOA3",
-                "x": 93.0312,
-                "y": 1603.27
+                "x": 180,
+                "y": 1600
             },
             "name14": {
                 "clickable": "false",
                 "type": "text",
                 "text": "A7RES3",
-                "x": 101.719,
-                "y": 1988.27
+                "x": 180,
+                "y": 1990
             },
-            "room14": {
+            "room15": {
                 "clickable": "true",
                 "type": "classroom",
                 "name": "A7RES1",
@@ -1009,15 +1019,15 @@
                 "clickable": "false",
                 "type": "text",
                 "text": "A7RES1",
-                "x": 700.719,
-                "y": 1600.27
+                "x": 780,
+                "y": 1600
             },
             "name16": {
                 "clickable": "false",
                 "type": "text",
                 "text": "A7RES2",
-                "x": 696.219,
-                "y": 1985.27
+                "x": 780,
+                "y": 1990
             },
             "line1": {
                 "clickable": "false",
