@@ -60,6 +60,23 @@ const TimeDisplay = ({ timeZone, locale = "en-GB" }) => {
   return <span>{currentTime}</span>;
 };
 
+// Dummy data for floors and rooms
+const floors = {
+  "Kampus 1": [
+    {
+      floorName: "Floor 1",
+      image: "/u (2).png",
+      rooms: ["Room 101", "Room 102", "Room 103"],
+    },
+    {
+      floorName: "Floor 2",
+      image: "/u (2).png",
+      rooms: ["Room 201", "Room 202", "Room 203"],
+    },
+  ],
+  "Kampus 2": [],
+}
+
 export default function Page() {
   const [activeTab, setActiveTab] = useState("Kampus 1");
   const [floorIndex, setFloorIndex] = useState(0);
