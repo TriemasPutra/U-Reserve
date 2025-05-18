@@ -28,19 +28,19 @@ export function PopUp({ floor, roomName, reservations, onClose }) {
     >
       <div
         className="bg-white rounded-lg shadow-lg w-3/4 max-w-4xl p-6"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the pop-up
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Room Name */}
         <h2 className="text-2xl font-bold text-center mb-4">{roomName}</h2>
 
-        <div className="flex">
+        <div className="flex flex-col md:flex-row gap-6">
           {/* Calendar Component */}
-          <div className="flex-1 pr-4">
-            {<Calendar />}
+          <div className="md:w-1/2 w-full pr-0 md:pr-4 mb-4 md:mb-0">
+            <Calendar />
           </div>
 
           {/* Reservation Status */}
-          <div className="flex-1 pl-4">
+          <div className="md:w-1/2 w-full pl-0 md:pl-4">
             {reservations.map((reservation, index) => (
               <div
                 key={index}
