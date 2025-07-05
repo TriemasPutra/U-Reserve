@@ -46,3 +46,4 @@ export const config = {
     '/((?!_next/static|_next/image|auth|api|manifest.webmanifest|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 }
+// Test
